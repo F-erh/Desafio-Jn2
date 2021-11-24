@@ -13,8 +13,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('controles/', [ControleController::class, 'index']);
 
 // List single controle
-#Route::get('controle/{id}', [ControleController::class, 'show']);
+Route::get('controle/{id}', [ControleController::class, 'show']);
 
+// List by final of Placa_do_Carro
 Route::get('controle/{Placa_do_Carro}', [ControleController::class, 'show_Placa_do_Carro']);
 
 // Create new controle
